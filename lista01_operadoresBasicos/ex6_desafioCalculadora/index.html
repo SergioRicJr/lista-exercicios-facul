@@ -5,8 +5,13 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <title>Lista 01 Exercício 06</title>
 	    <style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
 	        body{
-                margin: 10%;
+                padding-top: 40px;
                 display: flex;
 				flex-direction: column;
 				justify-items: center;
@@ -20,12 +25,35 @@
 	            align-items: center;
 	            gap: 10px;
             }
-			button{
+			.operadores button{
 				width: 30px;
+				font-size: 1.14em;
 			}
 			span{
 				background-color: rgb(230, 230, 230);
 				width: 150px;
+			}
+
+			.selecionado {
+				background-color: rgb(42, 142, 188);
+				color: antiquewhite;
+			}
+
+			button {
+				cursor: pointer;
+				border: 1px solid black;
+				border-radius: 5px;
+			}
+
+			.numero-final {
+				font-size: 35px;
+				height: 300px;
+				width: 300px;
+				background: linear-gradient(45deg, #15a91f,#56dbba, #21719c, #4c36c4, #241074);
+				border-radius: 200px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
 			}
 
 	    </style>
@@ -34,18 +62,18 @@
         <p><b>Exercício 06 - DESAFIO:</b> faça a calculadora funcionar.</p><br>
 	    <section>
 			<label for="n1">N1</label>
-            <input type="text" id="n1" value="">
+            <input type="text" class="n1" value="">
 			<label for="n2">N2</label>
-            <input type="text" id="n2" value="">
+            <input type="text" class="n2" value="">
+		</section>
+		<section class="operadores">
+			<button class="Sum">+</button>
+			<button class="Sub">-</button>
+			<button class="Mult">*</button>
+			<button class="Div">/</button>
 		</section>
 		<section>
-			<button id="btnSomar">+</button>
-			<button id="btnSub">-</button>
-			<button id="btnMult">*</button>
-			<button id="btnDiv">/</button>
-		</section>
-		<section>
-			<span id="result">RESULTADO</span>
+			<button class="result">RESULTADO</button>
 		</section>
 		<script src="./calculadora.js"></script>
 	</body>
