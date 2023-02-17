@@ -47,10 +47,10 @@ btnDiv.addEventListener("click", function(){
     operador = "/"
 })
 
-
+var x = 0
 btnResultado.addEventListener("click", function(){
     var numero1 = Number(n1.value)
-    var numero2 = Number(n2.value)
+    var numero2 = Number(n2.value)        
     switch (operador){
         case "+":
             resultado = numero1 + numero2
@@ -59,6 +59,7 @@ btnResultado.addEventListener("click", function(){
             novoElemento.classList.add("numero-final")
             body.appendChild(novoElemento)
             body.style.alignItems = "center"
+           
             break
         case "-":
             resultado = numero1 - numero2
@@ -67,6 +68,7 @@ btnResultado.addEventListener("click", function(){
             novoElemento.classList.add("numero-final")
             body.appendChild(novoElemento)
             body.style.alignItems = "center"
+           
             break
         case "*":
             resultado = numero1 * numero2
@@ -75,6 +77,7 @@ btnResultado.addEventListener("click", function(){
             novoElemento.classList.add("numero-final")
             body.appendChild(novoElemento)
             body.style.alignItems = "center"
+           
             break
         case "/":
             resultado = numero1 / numero2
@@ -83,6 +86,7 @@ btnResultado.addEventListener("click", function(){
             novoElemento.classList.add("numero-final")
             body.appendChild(novoElemento)
             body.style.alignItems = "center"
+          
             break
         default:
             alert("Um dos campos não foi preenchido")
